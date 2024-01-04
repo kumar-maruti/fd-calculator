@@ -1,0 +1,104 @@
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 20px;
+          background-color: #373838;
+        }
+
+        .container {
+          text-align: center;
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #ffffff;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+          text-align: center;
+          color: #3cfa6b;
+          margin-bottom: 20px;
+        }
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: #333333;
+          text-align: left;
+        }
+
+        input[type="text"] {
+          width: 80px;
+          height: 20px;
+          background-color: #c8ffc8;
+          margin-bottom: 10px;
+          padding: 5px;
+          font-size: 16px;
+          text-align:right;
+          border: 2px solid #aaa9ec;
+          border-radius: 1px;
+        }
+      
+        .slider-track {
+          width: 100%;
+          height: 8px;
+          margin-bottom: 10px;
+          background-color: #f1f1f1;
+          border-radius: 3px;
+          position: relative;
+        }
+
+        .slider-progress {
+          position: absolute;
+          height: 100%;
+          background-color: #04AA6D;
+          width: 0;
+          border-radius: 3px;
+          transition: width 0.3s;
+        }
+
+        #investmentTrack {
+          width: 500px;
+        }
+
+        #returnRateTrack {
+          width: 500px;
+        }
+
+        #timePeriodTrack {
+          width: 500px;
+        }
+
+        button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-family: sans-serif;
+          color: #ffffff;
+          background-color: #6c5df1;
+          border-radius: 3px;
+          border-style: none;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        button:hover {
+          background-color: #4900f5;
+        }
+
+        #result-container {
+          text-align: left;
+          margin-top: 20px;
+          padding: 10px;
+          border: 1px solid #cccccc;
+          border-radius: 3px;
+          background-color: #f1f1f1;
+        }
+
+        #result-container p {
+          margin: 5px 0;
+          text-align: center;
+          width: auto;
+        }

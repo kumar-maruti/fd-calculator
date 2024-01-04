@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FD Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 style="text-align: center;">FD Calculator</h1>
+  <div class="container">
+    <label for="investmentAmount" style="display: flex; justify-content: space-between;">
+      <span>Total Investment Amount:</span><br>
+      <input type="text" id="investmentAmount" min="100" max="10000000" step="1000" value="100000" class="slider"
+        onchange="updateSlider('investmentAmount', 'investmentTrack', 'investmentAmount')"
+        oninput="updateSlider('investmentAmount', 'investmentTrack', 'investmentAmount')">
+    </label>
+
+    <input type="range" id="investmentTrack" min="100" max="10000000" step="1000" value="100000" class="slider"
+      oninput="updateSlider('investmentTrack', 'investmentAmount', 'investmentTrack')"><br><br>
+
+    <label for="returnRate" style="display: flex; justify-content: space-between;">
+      <span>Rate of Interest(p.a):</span><br>
+      <input type="text" id="returnRate" min="1" max="20" step="0.01" value="6.5" class="slider"
+        onchange="updateSlider('returnRate', 'returnRateTrack', 'returnRate')"
+        oninput="updateSlider('returnRate', 'returnRateTrack', 'returnRate')">
+    </label>
+
+    <input type="range" id="returnRateTrack" min="1" max="20" step="0.01" value="6.5" class="slider"
+      oninput="updateSlider('returnRateTrack', 'returnRate', 'returnRateTrack')"><br><br>
+
+    <label for="timePeriod" style="display: flex; justify-content: space-between;">
+      <span>Time Period: <select id="timePeriodUnit" onchange="updateTimePeriodUnit()">
+          <option value="years">Years</option>
+          <option value="months">Months</option>
+          <option value="days">Days</option>
+        </select></span><br>
+      <input type="text" id="timePeriod" min="1" max="50" step="1" value="5" class="slider"
+        onchange="updateSlider('timePeriod', 'timePeriodTrack', 'timePeriod')"
+        oninput="updateSlider('timePeriod', 'timePeriodTrack', 'timePeriod')">
+    </label>
+
+    <input type="range" id="timePeriodTrack" min="1" max="50" step="1" value="5" class="slider"
+      oninput="updateSlider('timePeriodTrack', 'timePeriod', 'timePeriodTrack')"><br><br>
+
+    <button onclick="calculate()">Calculate</button><br><br>
+
+    <div id="result-container"></div>
+  </div>
+<script src="main.js"></script>
+</body>
+
+</html>
